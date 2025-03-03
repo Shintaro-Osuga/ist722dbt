@@ -20,6 +20,9 @@ with source_data as (
 select UNITSINSTOCK
 from source_data
 
+select SUPPLIERID, UNITSONORDER
+from source_data
+
 /*
     Uncomment the line below to remove records with null `id` values
 */
