@@ -19,3 +19,15 @@ models:
             tests:
                 - unique
                 - not_null
+
+
+sources:
+    - name: IST722
+      database: NORTHWINDDILOW
+      schema: IST722
+      tables:
+        - name: DAY
+        - name: PRODUCTID
+        - name: SUPPLIERID
+        - name: UNITSINSTOCK
+        - name: UNITSONORDER
