@@ -22,12 +22,8 @@ models:
 
 
 sources:
-    - name: IST722
-      database: NORTHWINDDILOW
-      schema: IST722
+    - name: quickstart
+      database: IST722
+      schema: quickstart
       tables:
-        - name: DAY
-        - name: PRODUCTID
-        - name: SUPPLIERID
-        - name: UNITSINSTOCK
-        - name: UNITSONORDER
+        - name: NORTHWINDDILOW
