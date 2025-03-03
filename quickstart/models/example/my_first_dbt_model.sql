@@ -17,7 +17,7 @@ with source_data as (
 
 )
 
-select DAY, UNITSINSTOCK
+select UNITSINSTOCK
 from source_data
 
 /*
