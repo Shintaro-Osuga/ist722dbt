@@ -17,10 +17,7 @@ with source_data as (
 
 )
 
-select UNITSINSTOCK
-from source_data
-
-select SUPPLIERID, UNITSONORDER
+select *
 from source_data
 
 /*
