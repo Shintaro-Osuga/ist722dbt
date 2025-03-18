@@ -25,3 +25,4 @@ select
     od.discountamount, od.soldamount
     from stg_orders o
         join stg_order_details od on o.orderid = od.orderid
+

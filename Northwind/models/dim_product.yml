@@ -1,5 +1,20 @@
 version: 2
 
+# models:
+#   - name: dim_product
+#     description: Product dimension. One row per product
+#     columns:
+#       - name: productkey
+#         description: The surrgate key of the product
+#         tests:
+#           - not_null
+#           - unique
+#       - name: productid
+#         description: The business / source key of the product
+#         tests:
+#           - not_null
+#           - unique
+
 models:
   - name: dim_product
     description: Product dimension. One row per product
@@ -7,10 +22,10 @@ models:
       - name: productkey
         description: The surrgate key of the product
         tests:
-          - not_null
           - unique
+          - not_null
       - name: productid
         description: The business / source key of the product
         tests:
-          - not_null
           - unique
+          - not_null

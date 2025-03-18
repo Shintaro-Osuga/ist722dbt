@@ -24,3 +24,4 @@ select
     left join d_product on f.productkey = d_product.productkey
     left join d_date on f.orderdatekey = d_date.datekey
     left join d_employee on f.employeekey = d_employee.employeekey
+

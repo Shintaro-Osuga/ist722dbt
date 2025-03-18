@@ -21,3 +21,4 @@ select
     left join d_customer on f.customerkey = d_customer.customerkey
     left join d_employee on f.employeekey = d_employee.employeekey
     left join d_date on f.orderdatekey = d_date.datekey
+
