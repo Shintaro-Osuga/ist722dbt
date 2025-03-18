@@ -1,6 +1,10 @@
 version: 2
 
+# models:
+#   - name: obt_order_fulfillment
+#     description: The order fulfillment fact table combines with all of its outrigger dimensions into on big table. Transction fact table with one row per order dow not include product.
+    
+
 models:
   - name: obt_order_fulfillment
-    description: The order fulfillment fact table combines with all of its outrigger dimensions into on big table. Transction fact table with one row per order dow not include product.
-    
+    description: The order fulfillment fact table combines with all of its outrigger dimensions into on big table. Transction fact table with one row per order dow not include product
