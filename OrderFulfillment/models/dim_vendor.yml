@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_employee
+    description: Employee Dimension. One row per employee
+    columns:
+      - name: employeekey
+        description: Dimension key
+        tests:
+          - not_null
+          - unique
+      - name: employeeid
+        description: source key
+        tests:
+          - not_null
+          - unique
+
+      - name: employeefirstlast
+        description: first name last name
+        tests:
+          - not_null
+          - unique
+      - name: employeelastfirst
+        description: last name first name
+        tests:
+          - not_null
+          - unique
+      - name: Division
+        description: Source - set acc to data ssource (fudgemart or fudgeflix)
+        tests:
+          - not_null
+          - unique

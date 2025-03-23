@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: Customer Dimension. One row per customer
+    columns:
+      - name: customerkey
+        description: The surrogate key of the customer
+        tests:
+          - not_null
+          - unique
+      - name: customerid
+        description: The business / source key of the customer
+        tests:
+          - not_null
+          - unique
+      - name: customer_firstlast
+        description: customer firstname lastname
+        tests:
+          - not_null
+          - unique
+      - name: customer_lastfirst
+        description: customer lastname firstname
+        tests:
+          - not_null
+          - unique
+      - name: customer_city
+        description: customer city
+        tests:
+          - not_null
+          - unique
+      - name: customer_state
+        description: customer state
+        tests:
+          - not_null
+          - unique
+      - name: Division
+        description: Source - set acc to data ssource (fudgemart or fudgeflix)
+        tests:
+          - not_null
+          - unique

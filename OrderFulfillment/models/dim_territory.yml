@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_territory
+    description: Territory Dimension. One row per territory
+    columns:
+      - name: Zip_Key
+        description: Dimension key
+        tests:
+          - not_null
+          - unique
+      - name: Zip_Code
+        description: source key
+        tests:
+          - not_null
+          - unique
+      - name: Zip_city
+        description: The city of the territory
+        tests:
+          - not_null
+          - unique
+      - name: Zip_state
+        description: The state of the territory
+        tests:
+          - not_null
+          - unique
+      - name: Division
+        description: Source - set acc to data ssource (fudgemart or fudgeflix)
+        tests:
+          - not_null
+          - unique

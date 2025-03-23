@@ -1,0 +1,90 @@
+version: 2
+
+sources:
+  - name: conformed
+    database: raw
+    schema: conformed
+
+    tables:
+      - name: DateDimension
+        columns:
+          - name: DateKey
+            tests:
+              - unique
+
+  - name: fudgemart_v3
+    database: raw
+    schema: fudgemart_v3
+
+    tables:
+      - name: fm_customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+      - name: fm_employees
+        columns:
+          - name: employee_id
+            tests:
+              - unique        
+      - name: fm_orders
+        columns:
+          - name: order_id
+            tests:
+              - unique        
+      - name: fm_products
+        columns:
+          - name: product_id
+            tests:
+              - unique
+      # - name: fm_shipvia_lookup
+      #   columns:
+      #     - name: ship_via
+      #       tests:
+      #         - unique
+      - name: fm_vendors
+        columns:
+          - name: vendor_id
+            tests:
+              - unique
+      - name: fm_order_details
+        columns:
+          - name: order_id
+            tests:
+              - unique
+
+  - name: vbay
+    database: raw
+    schema: vbay
+
+    tables:
+      - name: vb_items
+        columns:
+          - name: item_id
+            tests:
+              - unique
+              - not_null
+      - name: vb_users
+        columns:
+          - name: user_id
+            tests:
+              - unique
+              - not_null
+      - name: vb_user_ratings
+        columns:
+          - name: rating_id
+            tests:
+              - unique
+              - not_null
+      - name: vb_zip_codes
+        columns:
+          - name: zip_code
+            tests:
+              - unique
+              - not_null
+      - name: vb_bids
+        columns:
+          - name: bid_user_id
+            tests:
+              - unique
+              - not_null
