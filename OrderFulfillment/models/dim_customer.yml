@@ -4,33 +4,23 @@ models:
   - name: dim_customer
     description: Customer Dimension. One row per customer
     columns:
-      - name: customerkey
+      - name: user_id
         description: The surrogate key of the customer
         tests:
           - not_null
           - unique
-      - name: customerid
-        description: The business / source key of the customer
-        tests:
-          - not_null
-          - unique
-      - name: customer_firstlast
+      - name: firstname
         description: customer firstname lastname
         tests:
           - not_null
           - unique
-      - name: customer_lastfirst
+      - name: lastname
         description: customer lastname firstname
         tests:
           - not_null
           - unique
-      - name: customer_city
-        description: customer city
-        tests:
-          - not_null
-          - unique
-      - name: customer_state
-        description: customer state
+      - name: zip
+        description: customer zip
         tests:
           - not_null
           - unique

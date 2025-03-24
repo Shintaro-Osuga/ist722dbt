@@ -4,23 +4,23 @@ models:
   - name: dim_date
     description: Conformed Date Dimension. One row per day of the year.
     columns:
-      - name: customer_id
+      - name: orderid
         description: The business / source key of the customer
         tests:
           - not_null
           - unique
-      - name: product_add_date
+      - name: start_date
         description: date product is added
         tests:
           - not_null
           - unique
-      - name: order_date
-        description: date product was ordered
+      - name: end_date
+        description: date product was shipped
         tests:
           - not_null
           - unique
-      - name: shipped_date
-        description: date product is shipped
+      - name: time_diff
+        description: the lag between when order was made and item was shipped
         tests:
           - not_null
           - unique

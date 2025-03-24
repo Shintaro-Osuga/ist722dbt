@@ -5,12 +5,12 @@ models:
     description: Product Dimension. One row per product
     columns:
       - name: productid
-        description: source key
+        description: id of the product
         tests:
           - not_null
           - unique
       - name: product_name
-        description: product name
+        description: name of the product
         tests:
           - not_null
           - unique

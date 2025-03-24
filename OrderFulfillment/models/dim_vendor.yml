@@ -1,27 +1,21 @@
 version: 2
 
 models:
-  - name: dim_employee
+  - name: dim_vendor
     description: Employee Dimension. One row per employee
     columns:
-      - name: employeekey
+      - name: vendorkey
         description: Dimension key
         tests:
           - not_null
           - unique
-      - name: employeeid
-        description: source key
+      - name: user_id
+        description: id of the vendor
         tests:
           - not_null
           - unique
-
-      - name: employeefirstlast
-        description: first name last name
-        tests:
-          - not_null
-          - unique
-      - name: employeelastfirst
-        description: last name first name
+      - name: username
+        description: first and last name of the vendor
         tests:
           - not_null
           - unique

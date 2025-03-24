@@ -10,7 +10,7 @@ models:
           - not_null
           - unique
       - name: Zip_Code
-        description: source key
+        description: zip code
         tests:
           - not_null
           - unique

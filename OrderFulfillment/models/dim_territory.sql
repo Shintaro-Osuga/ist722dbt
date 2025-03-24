@@ -4,7 +4,7 @@ with stg_vb_zip as
         DISTINCT zip_code AS Zip_code,
         zip_city AS Zip_City,
         zip_state AS Zip_State,
-        'vBay' AS division
+        'vbay' AS division
     FROM {{ source("vbay", "vb_zip_codes") }}
 ), stg_fm_zip as
 (
@@ -31,5 +31,5 @@ with stg_vb_zip as
 )
 
 select 
-* 
+    * 
 from stg_common_zip
