@@ -1,0 +1,1 @@
+select * from {{source("vbay","vb_bids")}}

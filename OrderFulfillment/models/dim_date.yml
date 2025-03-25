@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: Conformed Date Dimension. One row per day of the year.
+    columns:
+      - name: orderid
+        description: The business / source key of the customer
+        tests:
+          - not_null
+          - unique
+      - name: start_date
+        description: date product is added
+        tests:
+          - not_null
+          - unique
+      - name: end_date
+        description: date product was shipped
+        tests:
+          - not_null
+          - unique
+      - name: time_diff
+        description: the lag between when order was made and item was shipped
+        tests:
+          - not_null
+          - unique
+      - name: Division
+        description: Source - set acc to data ssource (fudgemart or fudgeflix)
+        tests:
+          - not_null
+          - unique

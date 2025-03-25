@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_order
+    description: Conformed Date Dimension. One row per day of the year.
+    columns:
+      - name: order_id
+        description: the id of the order transaction
+        tests:
+          - not_null
+          - unique
+      - name: product_id
+        description: the id of the product which was ordered
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: id of the customer who made the order
+        tests:
+          - not_null
+          - unique
+      - name: Division
+        description: Source - set acc to data ssource (fudgemart or fudgeflix)
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: fact_order_fulfillment
+    description: Order level fact table. Transaction one row per order does not include product but can track order fulfillment
+    columns:
+      - name: OrderId
+        description: Degenerate dimension for of the order.
+        tests:
+          - unique
+          - not_null
+      - name: start_date
+        description: date which order was place or item was put on auction
+      - name: end_date
+        description: date which order was shipped or item was sold
+      - name: time_diff
+        description: the time difference between when order was shipped and order was placed
+      - name: division
+        description: vbay or fudgemart_v3
+      - name: product_id
+        description: id of the product
+      - name: customer_id
+        description: id of the customer
+      - name: product_name
+        description: the name of the product
+      - name: product_type
+        description: type of the product
+      - name: product_price
+        description: price of the product
+      - name: user_id
+        description: id of the user
+      - name: user_email
+        description: email of the user
+      - name: namefirstlast
+        description: first name last name
+      - name: namelastfirst
+        description: last name first name
+      - name: zip
+        description: zip code
+      - name: vendor_username
+        description: vendors username/name
+      - name: vendor_id
+        description: id of the vendor
+      - name: zip_city
+        description: city of the zip
+      - name: zip_state
+        description: state of the zip

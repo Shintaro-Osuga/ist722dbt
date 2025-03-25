@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_product
+    description: Product Dimension. One row per product
+    columns:
+      - name: productid
+        description: id of the product
+        tests:
+          - not_null
+          - unique
+      - name: product_name
+        description: name of the product
+        tests:
+          - not_null
+          - unique
+      - name: product_type
+        description: product type and category
+        tests:
+          - not_null
+          - unique
+      - name: product_price
+        description: product retail price and item reserve price
+        tests:
+          - not_null
+          - unique
+      - name: Division
+        description: Source - set acc to data ssource (fudgemart or fudgeflix)
+        tests:
+          - not_null
+          - unique

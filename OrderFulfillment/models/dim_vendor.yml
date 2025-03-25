@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: dim_vendor
+    description: Employee Dimension. One row per employee
+    columns:
+      - name: vendorkey
+        description: Dimension key
+        tests:
+          - not_null
+          - unique
+      - name: user_id
+        description: id of the vendor
+        tests:
+          - not_null
+          - unique
+      - name: username
+        description: first and last name of the vendor
+        tests:
+          - not_null
+          - unique
+      - name: Division
+        description: Source - set acc to data ssource (fudgemart or fudgeflix)
+        tests:
+          - not_null
+          - unique
